@@ -9,9 +9,13 @@ import { Quotes } from '../quotes';
 export class PostDetailsComponent implements OnInit {
 
   @Input() quote:Quotes;
+  @Output() deleteIt = new EventEmitter<boolean>();
   constructor() { }
 
   ngOnInit() {
   }
 
+  quoteDelete(complete:boolean){
+    this.deleteIt.emit(complete);
+  }
 }
