@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Quotes } from '../quotes';
 
 @Component({
@@ -15,7 +15,7 @@ export class PostDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
-  quoteDelete(complete:boolean){
-    this.deleteIt.emit(complete);
+  quoteDelete(remove:boolean){
+    this.deleteIt.emit(remove);
   }
 }
