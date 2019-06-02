@@ -1,2 +1,23 @@
 <p>{{quote.description}}</p>
 <button type="button" (click)="quoteDelete(true)" class="btn btn-danger">Delete</button>
+<div class="votes">
+  <div class="value">
+    {{votes}}
+  </div>
+</div>
+<div>
+  <ul>
+    <li class="item">
+      <a (click)="voteUp()">
+        <i class="fa fa-arrow-up"></i>
+        upvote
+      </a>
+    </li>
+    <li class="item">
+      <a (click)="voteDown()">
+        <i class="fa fa-arrow-down"></i>
+        downvote
+      </a>
+    </li>
+  </ul>
+</div>

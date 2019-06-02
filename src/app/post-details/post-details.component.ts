@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, HostBinding, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Quotes } from '../quotes';
 
 @Component({
@@ -10,8 +10,20 @@ export class PostDetailsComponent implements OnInit {
 
   @Input() quote:Quotes;
   @Output() deleteIt = new EventEmitter<boolean>();
-  constructor() { }
+  @HostBinding('attr.class') cssClass='row';
+  votes: number;
 
+  constructor() {
+    this.votes= 0;
+   }
+
+  voteUp(){
+    this.votes += 1;
+  }
+
+  voteDown(){
+    this.votes -= 1;
+  }
   ngOnInit() {
   }
 
