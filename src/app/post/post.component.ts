@@ -14,10 +14,16 @@ export class PostComponent implements OnInit {
     new Quotes("The Notorius B.I.G", "One good thing about music, when it hits you, you feel no pain.", new Date(1997, 1, 7)),
     new Quotes("Marshall Mathers", "I’d shoot for the moon but I’m too busy gazing at stars.", new Date(2010, 3, 29)),
   ];
+
   showDescription(index){
     this.quotes[index].showQuote = !this.quotes[index].showQuote;
   }
 
+  removeIt(deleteIt, index){
+    if(deleteIt){
+      this.quotes.splice(index);
+    }
+  }
   constructor() { }
 
   ngOnInit() {
