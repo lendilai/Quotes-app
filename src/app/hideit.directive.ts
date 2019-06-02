@@ -1,12 +1,21 @@
-import { Directive,ElementRef } from '@angular/core';
+import { Directive,ElementRef, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appHideit]'
 })
 export class HideitDirective {
 
-  constructor(private elem:ElementRef) {
-    this.elem.nativeElement.style.visibility="hidden";
+  constructor(private elem:ElementRef) { }
+
+  @HostListener("click") onClicks(){
+    this.cancelIt("white");
   }
 
+  @HostListener("dblclick") onDoubleClicks(){
+    this.cancelIt("black")
+  }
+
+  private cancelIt(action:string){
+      this.elem.nativeElement.style.color=action;
+  }
 }
