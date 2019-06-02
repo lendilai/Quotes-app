@@ -21,7 +21,7 @@ export class PostComponent implements OnInit {
 
   removeIt(deleteIt, index){
     if(deleteIt){
-      this.quotes.splice(index);
+      this.quotes.splice(index, 1);
     }
   }
   constructor() { }
