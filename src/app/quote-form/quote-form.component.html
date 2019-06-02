@@ -1,5 +1,5 @@
-<form #goalForm='ngForm'>
-  <div class="form-group" (ngSubmit)="submit()">
+<form #goalForm='ngForm' (ngSubmit)="submit()">
+  <div class="form-group">
     <label for="Author">Author: </label>
     <input required class="form-control form-control-lg" type="text" placeholder="Author" name="author" [(ngModel)]="newQuote.author" #author="ngModel">
     <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
@@ -20,4 +20,5 @@
       <p>Add a date</p>
     </div>
   </div>
+  <button type="submit" class="btn btn-success">Add Quote</button>
 </form>

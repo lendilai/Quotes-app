@@ -24,6 +24,10 @@ export class PostComponent implements OnInit {
       this.quotes.splice(index, 1);
     }
   }
+  fromUser(quote){
+    quote.newDate = new Date(quote.newDate);
+    this.quotes.unshift(quote);
+  }
   constructor() { }
 
   ngOnInit() {

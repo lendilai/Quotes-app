@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-lg-6">
-      <app-quote-form></app-quote-form>
+      <app-quote-form (addQuote)="fromUser($event)"></app-quote-form>
     </div>
     <div *ngFor="let quote of quotes; index as i" class="col-lg-6">
       <p>{{quote.author}} <br> {{quote.newDate | date:'mediumDate'}}</p><br>
