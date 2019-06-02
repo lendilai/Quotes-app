@@ -15,3 +15,22 @@ h3 {
   text-align: center;
   text-decoration: underline;
 }
+
+.icon {
+  height: 7vw;
+  width: 7vw;
+}
+
+.row {
+  padding-top: 10%;
+  text-align: center;
+  margin: auto;
+  width: 75%;
+}
+
+.start {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 5%;
+  font-size: 3vw;
+}
