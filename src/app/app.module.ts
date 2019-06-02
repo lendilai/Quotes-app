@@ -7,13 +7,17 @@ import { PostDetailsComponent } from './post-details/post-details.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { FormsModule } from '@angular/forms';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { HideDirective } from './hide.directive';
+import { HideitDirective } from './hideit.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
     PostDetailsComponent,
-    QuoteFormComponent
+    QuoteFormComponent,
+    HideDirective,
+    HideitDirective
   ],
   imports: [
     BrowserModule,
