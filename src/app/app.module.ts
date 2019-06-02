@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HideDirective } from './hide.directive';
 import { HideitDirective } from './hideit.directive';
+import { DaysSincePipe } from './days-since.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HideitDirective } from './hideit.directive';
     PostDetailsComponent,
     QuoteFormComponent,
     HideDirective,
-    HideitDirective
+    HideitDirective,
+    DaysSincePipe
   ],
   imports: [
     BrowserModule,

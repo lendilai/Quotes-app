@@ -5,7 +5,8 @@
     </div>
     <div class="col-lg-6">
       <div *ngFor="let quote of quotes; index as i">
-        <p>{{quote.author}} <br> <span appHideit>{{quote.newDate | date:'mediumDate'}}</span></p><br>
+        <p>{{quote.author}} <br> <span appHideit>{{quote.newDate | date:'mediumDate'}}</span></p>
+        <p>{{quote.newDate | daysSince}}</p><br>
         <app-post-details *ngIf="quote.showQuote" [quote]='quote' (deleteIt)="removeIt($event, i)"></app-post-details><br>
         <button type="button" (click)="showDescription(i)" class="btn btn-primary">Show Quote</button><br>
       </div>
