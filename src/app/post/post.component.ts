@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Quotes } from '../quotes';
-
+import * as $ from 'jquery';
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
@@ -24,13 +24,16 @@ export class PostComponent implements OnInit {
       this.quotes.splice(index, 1);
     }
   }
+  app.controller('MainCtrl', function($scope) {
+  $scope.changeVote = function(vote, flag) {
+    $scope.vote = vote == flag ? 'None' : flag;
+    alert($scope.vote);
+  };
+});
   fromUser(quote){
     quote.newDate = new Date(quote.newDate);
     this.quotes.unshift(quote);
   }
   constructor() { }
 
-  ngOnInit() {
-  }
-
-}
+  public ngOnInit(){}
