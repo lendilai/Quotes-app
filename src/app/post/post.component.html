@@ -1,3 +1,4 @@
-<p>
-  post works!
-</p>
+<div *ngFor="let quote of quotes">
+  <p>{{quote.author}} <br> {{quote.newDate | date:'mediumDate'}}</p><br>
+  <app-post-details [quote]='quote'></app-post-details>
+</div>
