@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(~node_modules/materialize-css/dist/css/materialize.css);
 @import "bootstrap/dist/css/bootstrap.css";
+@import url(~node_modules/font-awesome/css/font-awesome.css);
 
 nav a.active {
-  background-color: rgba(211, 211, 211, 0.4);
-  border-radius: 10px;
-  padding: 5px 20px;
+  color: yellow !important;
 }
 
 .align-middle {

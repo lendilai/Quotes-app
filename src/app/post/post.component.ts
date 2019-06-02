@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Quotes } from '../quotes';
-import * as $ from 'jquery';
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
@@ -30,4 +29,5 @@ export class PostComponent implements OnInit {
   }
   constructor() { }
 
-  public ngOnInit(){}
+  ngOnInit(){}
+}
