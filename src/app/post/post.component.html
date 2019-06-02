@@ -1,4 +1,5 @@
-<div *ngFor="let quote of quotes">
+<div *ngFor="let quote of quotes; index as i">
   <p>{{quote.author}} <br> {{quote.newDate | date:'mediumDate'}}</p><br>
-  <app-post-details [quote]='quote'></app-post-details>
+  <button type="button" (click)="showDescription(i)" class="btn btn-primary">Show Quote</button><br>
+  <app-post-details *ngIf="quote.showQuote" [quote]='quote'></app-post-details>
 </div>
