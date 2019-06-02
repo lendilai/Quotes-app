@@ -1,14 +1,23 @@
-<form>
+<form #goalForm='ngForm'>
   <div class="form-group" (ngSubmit)="submit()">
     <label for="Author">Author: </label>
-    <input required class="form-control form-control-lg" type="text" placeholder="Author" name="author">
+    <input required class="form-control form-control-lg" type="text" placeholder="Author" name="author" [(ngModel)]="newQuote.author" #author="ngModel">
+    <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+      <p>Author name is required</p>
+    </div>
   </div>
   <div class="form-group">
     <label for="Quote">The Quote:</label>
-    <textarea name="quote" rows="4" required class="form-control"></textarea>
+    <textarea name="quote" rows="4" required class="form-control" [(ngModel)]="newQuote.quote" #quote="ngModel"></textarea>
+    <div class="alert alert-danger" [hidden]="quote.valid || quote.pristine">
+      <p>The quote should be included.</p>
+    </div>
   </div>
   <div class="form-group">
     <label for="theDate">The day quoted:</label>
-    <input type="date" required class="form-control form-control-lg">
+    <input type="date" required class="form-control form-control-lg" name="when" [(ngModel)]="newQuote.when" #when="ngModel">
+    <div class="alert alert-danger" [hidden]="when.valid || when.pristine">
+      <p>Add a date</p>
+    </div>
   </div>
 </form>
