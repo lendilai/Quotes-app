@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Ranga&display=swap');
+
 .fa-heart {
   color: red;
 }
 
 .fa-thumbs-down {
   color: #000080;
+}
+
+.desc {
+  font-family: "Ranga";
 }

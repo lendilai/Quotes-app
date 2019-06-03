@@ -20,7 +20,10 @@ export class PostComponent implements OnInit {
 
   removeIt(deleteIt, index){
     if(deleteIt){
-      this.quotes.splice(index, 1);
+      let confirmDelete = confirm("Are you sure you want to delete this quote?");
+      if(confirmDelete){
+        this.quotes.splice(index, 1);
+      }
     }
   }
   fromUser(quote){
