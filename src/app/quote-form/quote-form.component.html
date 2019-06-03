@@ -11,9 +11,9 @@
 
   <div class="form-group">
     <label for="Quote">The Quote:</label>
-    <textarea name="quote" rows="4" required class="form-control" [(ngModel)]="newQuote.quote" #quote="ngModel"></textarea>
+    <textarea name="description" rows="4" required class="form-control" [(ngModel)]="newQuote.description" #description="ngModel"></textarea>
 
-    <div class="alert alert-danger" [hidden]="quote.valid || quote.pristine">
+    <div class="alert alert-danger" [hidden]="description.valid || description.pristine">
       <p>The quote should be included.</p>
     </div>
 
@@ -21,9 +21,9 @@
 
   <div class="form-group">
     <label for="theDate">The day quoted:</label>
-    <input type="date" required class="form-control form-control-lg" name="when" [(ngModel)]="newQuote.when" #when="ngModel">
+    <input type="date" required class="form-control form-control-lg" name="newDate" [(ngModel)]="newQuote.newDate" #newDate="ngModel">
 
-    <div class="alert alert-danger" [hidden]="when.valid || when.pristine">
+    <div class="alert alert-danger" [hidden]="newDate.valid || newDate.pristine">
       <p>Add a date</p>
     </div>
 
