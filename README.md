@@ -22,7 +22,7 @@ First run:
 Then navigate to `http://localhost:4200/` on your browser.
 
 #### Live link
-If you don't want to run the app from your local browser you can acces it through the live link:
+If you don't want to run the app from your local browser you can acces it through the live link: https://lendilai.github.io/Quotes-app/
 
 ## Working mechanism
 - Go to the 'quotes' page.
