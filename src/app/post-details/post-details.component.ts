@@ -15,6 +15,7 @@ export class PostDetailsComponent implements OnInit {
 
   constructor() {
     this.votes= 0;
+    this.votesDown= 0;
    }
 
   voteUp(){
@@ -22,7 +23,7 @@ export class PostDetailsComponent implements OnInit {
   }
 
   voteDown(){
-    this.votes -= 1;
+    this.votesDown -= 1;
   }
   ngOnInit() {
   }
