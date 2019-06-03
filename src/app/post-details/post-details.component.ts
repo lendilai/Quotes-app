@@ -12,6 +12,7 @@ export class PostDetailsComponent implements OnInit {
   @Output() deleteIt = new EventEmitter<boolean>();
   @HostBinding('attr.class') cssClass='row';
   votes: number;
+  votesDown:number;
 
   constructor() {
     this.votes= 0;
@@ -23,7 +24,7 @@ export class PostDetailsComponent implements OnInit {
   }
 
   voteDown(){
-    this.votesDown -= 1;
+    this.votesDown += 1;
   }
   ngOnInit() {
   }
