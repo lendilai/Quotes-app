@@ -2,12 +2,19 @@
 
 .fa-heart {
   color: red;
+  font-size: 25px;
 }
 
 .fa-thumbs-down {
   color: #000080;
+  font-size: 25px;
 }
 
 .desc {
   font-family: "Ranga";
+}
+
+ul li {
+  display: inline-block;
+  padding: 10px;
 }

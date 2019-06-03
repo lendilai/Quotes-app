@@ -4,12 +4,16 @@
       <app-quote-form (addQuote)="fromUser($event)"></app-quote-form>
     </div>
     <div class="col-lg-6">
-      <div *ngFor="let quote of quotes; index as i">
-        <h4>{{quote.author}}</h4> <br>
-        <p> <span appHideit>{{quote.newDate | date:'mediumDate'}}</span>: {{quote.newDate | daysSince}} days ago.</p>
-        <br>
-        <app-post-details *ngIf="quote.showQuote" [quote]='quote' (deleteIt)="removeIt($event, i)"></app-post-details><br>
-        <button type="button" (click)="showDescription(i)" class="btn btn-primary"><i class="fa fa-eye"></i></button><br>
+      <div *ngFor="let quote of quotes index as i">
+        <div class="card card-primary">
+          <div class="infos">
+            <h4 class="card-header">{{quote.author}}</h4> <br>
+            <p> <span appHideit>{{quote.newDate | date:'mediumDate'}}</span>: {{quote.newDate | daysSince}} days ago.</p>
+            <br>
+            <app-post-details *ngIf="quote.showQuote" [quote]='quote' (deleteIt)="removeIt($event, i)"></app-post-details><br>
+            <button type="button" (click)="showDescription(i)" class="btn btn-primary col-md-3"><i class="fa fa-eye"></i></button><br>
+          </div>
+        </div>
       </div>
     </div>
   </div>
